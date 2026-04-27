@@ -1,7 +1,12 @@
 package App;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class FileProcessor {
     public String getFilePath() {
-        return "C:\\data\\config.txt";
+        // Sử dụng Paths.get để tự động thêm dấu phân cách đúng theo OS
+        Path path = Paths.get("data", "config.txt");
+        return path.toString();
     }
 }
